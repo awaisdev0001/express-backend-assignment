@@ -1,0 +1,466 @@
+{
+    "info": {
+        "_postman_id": "f21956f5-ef24-4a23-b47b-c34b2e94e326",
+        "name": "MERN Task",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Register",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"johndoe@goog.com\",\r\n  \"password\": \"123123As123123\",\r\n  \"phoneNumber\": \"+1234567890\",\r\n  \"gender\": \"male\",\r\n  \"isDeleted\": false\r\n}\r\n",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{baseUrl}}/auth/register",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["auth", "register"]
+                }
+            },
+            "response": [
+                {
+                    "name": "Register",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"johndoe@goog.com\",\r\n  \"password\": \"123123As123123\",\r\n  \"phoneNumber\": \"+1234567890\",\r\n  \"gender\": \"male\",\r\n  \"isDeleted\": false\r\n}\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/auth/register",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["auth", "register"]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "X-Powered-By",
+                            "value": "Express"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Headers",
+                            "value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "GET, POST, PUT, DELETE"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json; charset=utf-8"
+                        },
+                        {
+                            "key": "Content-Length",
+                            "value": "396"
+                        },
+                        {
+                            "key": "ETag",
+                            "value": "W/\"18c-ke/mdVNXfyMheId52EEPWUEuAHI\""
+                        },
+                        {
+                            "key": "Date",
+                            "value": "Thu, 20 Jul 2023 07:35:11 GMT"
+                        },
+                        {
+                            "key": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "key": "Keep-Alive",
+                            "value": "timeout=5"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "{\n    \"success\": true,\n    \"data\": {\n        \"name\": \"John Doe\",\n        \"email\": \"johndoe@goog.com\",\n        \"phoneNumber\": \"+1234567890\",\n        \"gender\": \"male\",\n        \"isDeleted\": false,\n        \"_id\": \"64b8e3aff614e450edaa1451\",\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGI4ZTNhZmY2MTRlNDUwZWRhYTE0NTEiLCJpYXQiOjE2ODk4Mzg1MTEsImV4cCI6MTY4OTkyNDkxMX0.HXNyvIF7vIiPTXN-zDE6jirYfVTSG2M4KU8jUE-7GBs\",\n    \"message\": \"Registration successful\"\n}"
+                }
+            ]
+        },
+        {
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n     \"email\": \"johndoe@goog.com\",\r\n  \"password\": \"123123As123123\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{baseUrl}}/auth/login",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["auth", "login"]
+                }
+            },
+            "response": [
+                {
+                    "name": "New Request",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n \"email\": \"johndoe@example.com\",\r\n  \"password\": \"123123As123123\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/auth/login",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["auth", "login"]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "X-Powered-By",
+                            "value": "Express"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Headers",
+                            "value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "GET, POST, PUT, DELETE"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json; charset=utf-8"
+                        },
+                        {
+                            "key": "Content-Length",
+                            "value": "392"
+                        },
+                        {
+                            "key": "ETag",
+                            "value": "W/\"188-BYZhjb+n1BVWA7dv0HtIXfid5EU\""
+                        },
+                        {
+                            "key": "Date",
+                            "value": "Wed, 19 Jul 2023 21:09:53 GMT"
+                        },
+                        {
+                            "key": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "key": "Keep-Alive",
+                            "value": "timeout=5"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"64b84c1da0c0699a4ffa4611\",\n        \"name\": \"John Doe\",\n        \"email\": \"johndoe@example.com\",\n        \"phoneNumber\": \"+1234567890\",\n        \"gender\": \"male\",\n        \"isDeleted\": false,\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGI4NGMxZGEwYzA2OTlhNGZmYTQ2MTEiLCJpYXQiOjE2ODk4MDA5OTMsImV4cCI6MTY4OTg4NzM5M30.fMrafD7s0CNPU8h1IxNTs8GA8OYl6gfflBteCcOtUmM\",\n    \"message\": \"Login successful\"\n}"
+                },
+                {
+                    "name": "Login",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n     \"email\": \"johndoe@goog.com\",\r\n  \"password\": \"123123As123123\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/auth/login",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["auth", "login"]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "X-Powered-By",
+                            "value": "Express"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Headers",
+                            "value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "GET, POST, PUT, DELETE"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json; charset=utf-8"
+                        },
+                        {
+                            "key": "Content-Length",
+                            "value": "389"
+                        },
+                        {
+                            "key": "ETag",
+                            "value": "W/\"185-aRKwEv5XZsAcdkRVhDQoaK7hZRo\""
+                        },
+                        {
+                            "key": "Date",
+                            "value": "Thu, 20 Jul 2023 07:35:36 GMT"
+                        },
+                        {
+                            "key": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "key": "Keep-Alive",
+                            "value": "timeout=5"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"64b8e3aff614e450edaa1451\",\n        \"name\": \"John Doe\",\n        \"email\": \"johndoe@goog.com\",\n        \"phoneNumber\": \"+1234567890\",\n        \"gender\": \"male\",\n        \"isDeleted\": false,\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGI4ZTNhZmY2MTRlNDUwZWRhYTE0NTEiLCJpYXQiOjE2ODk4Mzg1MzYsImV4cCI6MTY4OTkyNDkzNn0.cm_AB_QlrZRJ9Mzj-3GdFqtgPgm9tU5ERJoSa2HgUk8\",\n    \"message\": \"Login successful\"\n}"
+                }
+            ]
+        },
+        {
+            "name": "Profile",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGI4ZGM3MWM3MWIzYjczZmEyNjMwZjYiLCJpYXQiOjE2ODk4MzY2NTgsImV4cCI6MTY4OTkyMzA1OH0.YAEY55niRdsk1EIk99gXCBcjQTWAjpLtdbfSGNFrsW8",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/auth/profile",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["auth", "profile"]
+                }
+            },
+            "response": [
+                {
+                    "name": "Profile",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGI4NGMxZGEwYzA2OTlhNGZmYTQ2MTEiLCJpYXQiOjE2ODk4MDAwMjQsImV4cCI6MTY4OTg4NjQyNH0.cbJHvjx8cfWquDL8cmTa3impFz9So8wFdK-pM89QLyw",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/auth/profile",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["auth", "profile"]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "X-Powered-By",
+                            "value": "Express"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Headers",
+                            "value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "GET, POST, PUT, DELETE"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json; charset=utf-8"
+                        },
+                        {
+                            "key": "Content-Length",
+                            "value": "216"
+                        },
+                        {
+                            "key": "ETag",
+                            "value": "W/\"d8-DOxmGOCnYrSbYuX9mqOsWoCb14M\""
+                        },
+                        {
+                            "key": "Date",
+                            "value": "Wed, 19 Jul 2023 21:02:26 GMT"
+                        },
+                        {
+                            "key": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "key": "Keep-Alive",
+                            "value": "timeout=5"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"64b84c1da0c0699a4ffa4611\",\n        \"name\": \"John Doe\",\n        \"email\": \"johndoe@example.com\",\n        \"phoneNumber\": \"+1234567890\",\n        \"gender\": \"male\",\n        \"isDeleted\": false,\n        \"__v\": 0\n    },\n    \"message\": \"Get user profile successful\"\n}"
+                }
+            ]
+        },
+        {
+            "name": "Get Random Users",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGI4ZGM3MWM3MWIzYjczZmEyNjMwZjYiLCJpYXQiOjE2ODk4MzY2NTgsImV4cCI6MTY4OTkyMzA1OH0.YAEY55niRdsk1EIk99gXCBcjQTWAjpLtdbfSGNFrsW8",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/users/random",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["users", "random"],
+                    "query": [
+                        {
+                            "key": "",
+                            "value": null,
+                            "disabled": true
+                        }
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "name": "Get Random Users",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGI4NGMxZGEwYzA2OTlhNGZmYTQ2MTEiLCJpYXQiOjE2ODk4MDAwMjQsImV4cCI6MTY4OTg4NjQyNH0.cbJHvjx8cfWquDL8cmTa3impFz9So8wFdK-pM89QLyw",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/users/random",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["users", "random"],
+                            "query": [
+                                {
+                                    "key": "",
+                                    "value": null,
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "X-Powered-By",
+                            "value": "Express"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Headers",
+                            "value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "GET, POST, PUT, DELETE"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json; charset=utf-8"
+                        },
+                        {
+                            "key": "Content-Length",
+                            "value": "1109"
+                        },
+                        {
+                            "key": "ETag",
+                            "value": "W/\"455-RIjexSIWrePp9D0xrMcKXsaWtWM\""
+                        },
+                        {
+                            "key": "Date",
+                            "value": "Wed, 19 Jul 2023 21:04:28 GMT"
+                        },
+                        {
+                            "key": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "key": "Keep-Alive",
+                            "value": "timeout=5"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "{\n    \"success\": true,\n    \"data\": {\n        \"gender\": \"female\",\n        \"name\": {\n            \"title\": \"Ms\",\n            \"first\": \"Olivia\",\n            \"last\": \"Taylor\"\n        },\n        \"location\": {\n            \"street\": {\n                \"number\": 3707,\n                \"name\": \"Grand Ave\"\n            },\n            \"city\": \"Killarney\",\n            \"state\": \"Alberta\",\n            \"country\": \"Canada\",\n            \"postcode\": \"I2O 7K2\",\n            \"coordinates\": {\n                \"latitude\": \"-65.8727\",\n                \"longitude\": \"19.8529\"\n            },\n            \"timezone\": {\n                \"offset\": \"+1:00\",\n                \"description\": \"Brussels, Copenhagen, Madrid, Paris\"\n            }\n        },\n        \"email\": \"olivia.taylor@example.com\",\n        \"login\": {\n            \"uuid\": \"eee75870-8aa8-4b0a-8abd-5efd6537cd14\",\n            \"username\": \"ticklishfrog941\",\n            \"password\": \"respect\",\n            \"salt\": \"QPFSaOtQ\",\n            \"md5\": \"477f3f13bcccf32422dd6134bae4b848\",\n            \"sha1\": \"b6fc6f993e6e5611ab929836e58041d8eb4c43c2\",\n            \"sha256\": \"19231186dc183601ba388b4ebbab6281a5cac525cbe62975acc9b371b3b2eb6d\"\n        },\n        \"dob\": {\n            \"date\": \"1998-10-23T21:06:25.031Z\",\n            \"age\": 24\n        },\n        \"registered\": {\n            \"date\": \"2019-10-20T22:11:34.676Z\",\n            \"age\": 3\n        },\n        \"phone\": \"I24 U80-2677\",\n        \"cell\": \"F75 Q43-8384\",\n        \"id\": {\n            \"name\": \"SIN\",\n            \"value\": \"451835581\"\n        },\n        \"picture\": {\n            \"large\": \"https://randomuser.me/api/portraits/women/38.jpg\",\n            \"medium\": \"https://randomuser.me/api/portraits/med/women/38.jpg\",\n            \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/women/38.jpg\"\n        },\n        \"nat\": \"CA\"\n    }\n}"
+                }
+            ]
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [""]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [""]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://localhost:8000/api",
+            "type": "string"
+        }
+    ]
+}

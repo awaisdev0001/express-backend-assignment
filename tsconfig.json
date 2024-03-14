@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "pretty": true,
+        "target": "es6",
+        "outDir": "./dist",
+        "baseUrl": "./lib",
+        "esModuleInterop": true
+    },
+    "include": ["lib/**/*.ts", "lib/testCases/apiRoutes.test.js", "lib/testCases/database.test.js"],
+    "exclude": ["node_modules"]
+}
